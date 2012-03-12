@@ -1,0 +1,21 @@
+#hero {
+	width: 700px;
+	margin: 0 auto;
+}
+
+.navbar-inner {
+	border-radius: 0;
+}
+
+ul.details {
+	list-style-type: none;
+}
+
+ul.details li {
+	line-height: 24px;
+}
+
+.icon-linkedin {
+	background-image: url(/assets/linkedin_alt.png);
+	background-position: 0 0;
+}
