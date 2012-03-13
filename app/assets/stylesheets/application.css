@@ -8,6 +8,35 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
+ *= require_self
 */
+
+[class^="icon-"],
+[class*=" icon-"] {
+  background-image: url("/assets/glyphicons-halflings.png");
+}
+.icon-white {
+  background-image: url("/assets/glyphicons-halflings-white.png");
+}
+
+.navbar-inner {
+	border-radius: 0;
+}
+
+.navbar .container {
+	width: 940px;
+}
+
+ul.details {
+	list-style-type: none;
+}
+
+ul.details li {
+	line-height: 24px;
+}
+
+.icon-linkedin {
+	background-image: url(/assets/linkedin.png);
+	background-position: 0 0;
+}
