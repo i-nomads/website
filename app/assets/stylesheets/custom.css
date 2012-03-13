@@ -6,11 +6,6 @@
   background-image: url("/assets/glyphicons-halflings-white.png");
 }
 
-#hero {
-	width: 700px;
-	margin: 0 auto;
-}
-
 .navbar-inner {
 	border-radius: 0;
 }
