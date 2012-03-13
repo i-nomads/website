@@ -12,12 +12,11 @@
   <div class="navbar-inner">
     <div class="container">
 			<a class="brand" id="title">Cyrille Labesse</a>
-			<ul class="nav pull-right">
-			  <li class="active">
-					<%= link_to 'Home', root_path %>
+			<ul class="nav">
+			  <li<%= raw ' class="active"' if params[:action] == 'index' %>>
+					<%= link_to 'About', root_path %>
 			  </li>
-			  <li><a data-smooth="true" href="#skills">Skills</a></li>
-			  <li class="dropdown" id="dropdown-projects">
+			  <li class="dropdown<%= raw ' active' if params[:action] == 'work' %>" id="dropdown-projects">
 			    <a href="#dropdown-projects"
 			          class="dropdown-toggle"
 			          data-toggle="dropdown">
@@ -25,31 +24,37 @@
 			          <b class="caret"></b>
 			    </a>
 			    <ul class="dropdown-menu">
-						<li class="nav-header">Current</li>
-				    <li><a href="#goalbook">Goalbook</a></li>
-				    <li><a href="#wearetwl">We Are TWL</a></li>
-				    <li><a href="#peakasso">Peakasso</a></li>
+				    <li><a href="/work">See All Projects</a></li>
+					<li class="divider"></li>
+					<li class="nav-header">Current</li>
+				    <li><a href="/work#goalbook">Goalbook</a></li>
+				    <li><a href="/work#wearetwl">We Are TWL</a></li>
+				    <li><a href="/work#peakasso">Peakasso</a></li>
 					<li class="divider"></li>
 					<li class="nav-header">Past</li>
-				    <li><a href="#paatle">Paatle</a></li>
-				    <li><a href="#exact">E-xact</a></li>
-				    <li><a href="#hco">HCO Mobile</a></li>
-				    <li><a href="#spidart">Spidart</a></li>
-				    <li><a href="#teleobs">TéléObs</a></li>
+				    <li><a href="/work#paatle">Paatle</a></li>
+				    <li><a href="/work#exact">E-xact</a></li>
+				    <li><a href="/work#hco">HCO Mobile</a></li>
+				    <li><a href="/work#spidart">Spidart</a></li>
+				    <li><a href="/work#teleobs">TéléObs</a></li>
 					<li class="divider"></li>
 					<li class="nav-header">Resume</li>
 					<li><%= link_to raw('<i class="icon-linkedin"></i> LinkedIn Profile'), 'http://ca.linkedin.com/in/clabesse' %></li>
 					<li><%= link_to raw('<i class="icon-download"></i> Download PDF Resume'), '/Resume_Cyrille_LABESSE.pdf' %></li>
 			    </ul>
 			  </li>
-			  <li><a data-smooth="true" href="#contact">Contact</a></li>
+			  <li><a href="#contact">Contact</a></li>
+			</ul>
+			<ul class="nav pull-right">
+			  <li>
+					<%# link_to 'Blog', root_path %>
+			  </li>
 			</ul>
     </div>
   </div>
 </div>
 <div class="container">
 	<%= yield %>
-	<hr />
 	<footer>
 		<div class="breadcrumb">
 			<%= link_to 'Back to top', '#top' %> · &copy; Cyrille Labesse <%= Time.now.year %>	
