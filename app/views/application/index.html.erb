@@ -118,18 +118,20 @@
 					</div>
 				</fieldset>
 				<br />
-				<form class="form-horizontal">
+				<%= form_for @contact, remote: true, html: {class: 'form-horizontal'} do |f| %>
 				  <fieldset>
 				    <legend>Text</legend>
 						<br />
 							<div class="row">
 								<div class="span8">
 									<p>Feel free to drop me a quick line using the form below</p>
-									<br />
+									<div class="alert alert-error" style="display: none">
+										Both email address and message fields must be filled out.
+									</div>
 							    <div class="control-group">
 							      <label class="control-label" for="input01">Name</label>
 							      <div class="controls">
-							        <input type="text" class="span4" id="input01" placeholder="Your full name">
+							        <%= f.text_field :name, class: 'span4', placeholder: "Your full name" %>
 							      </div>
 							    </div>
 				          <div class="control-group">
@@ -137,18 +139,18 @@
 				            <div class="controls">
 				              <div class="input-prepend">
 				                <span class="add-on"><i class="icon-envelope"></i></span>
-				                <input class="span3" id="prependedInput" size="16" type="text" placeholder="me@domain.com">
+							        <%= f.text_field :email, class: 'span3', placeholder: "me@domain.com", size: 16 %>
 				              </div>
 				            </div>
 				          </div>
 				          <div class="control-group">
 				            <label class="control-label" for="prependedInput">Your Message</label>
 				            <div class="controls">
-				              <textarea class="input-xlarge" id="textarea" type="text" rows="6"></textarea>
+							        <%= f.text_area :message, class: 'input-xlarge', rows: 6 %>
 				            </div>
 				          </div>
 									<div class="form-actions">
-				            <button type="submit" class="btn btn-primary">Send Message</button>
+				            <button type="submit" data-toggle="button" data-loading-text="Sending…" class="btn btn-primary">Send Message</button>
 									</div>
 								</div>
 								<div class="span4">
@@ -160,7 +162,7 @@
 								</div>
 							</div>
 				  </fieldset>
-				</form>
+				<% end %>
 			</section>
 	  </div>
 	</div>

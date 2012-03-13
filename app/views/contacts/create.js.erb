@@ -1,0 +1,10 @@
+$('form div.control-group').removeClass('error');
+<% if @contact.new_record? %>
+$('form button[type=submit]').button('reset');
+$('form div.alert').fadeTo('slow', 1);
+<%= errors_to_jquery_magic(@contact) %>
+<% else %>
+$('form input, form textarea').attr('disabled', true);
+$('form div.alert-error').fadeOut();
+$('form button[type=submit]').replaceWith('Your message has been sent. Thank you!');
+<% end %>

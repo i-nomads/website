@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-button
 //= require bootstrap-transitions
 //= require bootstrap-dropdown
 //= require bootstrap-tooltip
@@ -21,5 +22,8 @@
 //= require_tree .
 
 $(document).ready(function() {
+	$('form').first().submit(function() {
+			$(this).find('button[type=submit]').button('loading');
+	});
 	$('.dropdown-toggle').dropdown();	
 });

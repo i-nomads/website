@@ -57,3 +57,5 @@ module California
     config.assets.version = '1.0'
   end
 end
+
+RECIPIENT_EMAIL = 'cyrille.labesse@gmail.com'
