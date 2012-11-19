@@ -108,7 +108,6 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
-  libv8 (= 3.3.10.4)
   mysql2
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)
