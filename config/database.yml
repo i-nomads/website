@@ -1,15 +1,15 @@
 development:
-  adapter: mysql2
+  adapter: postgresql
   database: cyrillelabesse
-  username: root
+  username: clabesse
   password: 
 test:
-  adapter: mysql2
+  adapter: postgresql
   database: cyrillelabesse_test
-  username: root
+  username: clabesse
   password: 
 production:
-  adapter: mysql2
+  adapter: postgresql
   database: cyrillelabesse
-  username: root
+  username: clabesse
   password: 
